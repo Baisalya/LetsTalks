@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/ic_wavesignup"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -61,7 +62,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#DF1D95F8"
+            android:background="#DF34A0FA"
             android:orientation="vertical"
             android:paddingLeft="1dp"
             android:paddingRight="1dp"
@@ -93,56 +94,7 @@
                 android:drawablePadding="20dp"
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/ic_baseline_vpn_key_24" />
-            <!--            <EditText
-                            android:id="@+id/editTextPhone2"
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:background="@drawable/edittext"
-                            android:ems="10"
-                            android:gravity="center"
-                            android:hint="@string/enter_your_phone_no"
-                            android:inputType="phone"
-                            android:paddingTop="5dp"
-                            android:textColorHint="#63FFC107"
-                            android:autofillHints="" />
 
-                        <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="5dp">
-
-                        </Space>
-
-                        <EditText
-                            android:id="@+id/editTextTextPassword2"
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:background="@drawable/edittext"
-                            android:ems="10"
-                            android:gravity="center"
-                            android:hint="@string/enter_your_password"
-                            android:inputType="textPassword"
-                            android:paddingTop="10dp"
-                            android:textColorHint="#63FFC107"
-                            android:autofillHints="" />
-
-                        <TextView
-                            android:id="@+id/textView2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:baselineAligned="false"
-                            android:fontFamily="sans-serif-condensed-light"
-                            android:text="@string/forgot_password"
-                            android:textColor="#03A9F4"
-                            android:textColorHighlight="#666868"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <Space
-                            android:layout_width="match_parent"
-                            android:layout_height="20dp">
-
-                        </Space>-->
 
             <Button
                 android:id="@+id/btnlogin"
@@ -153,42 +105,40 @@
                 android:textColor="#0E0E0E">
 
             </Button>
+            <View
+                android:id="@+id/divider"
+                android:layout_width="409dp"
+                android:layout_height="1dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="32dp"
+                android:background="?android:attr/listDivider"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView"
+                app:layout_constraintVertical_bias="0.132">
 
 
+            </View>
+            <TextView
+                android:id="@+id/toregd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:text="@string/new_user_please_click_here"
+                android:textColor="#EFE6E6">
+
+            </TextView>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="409dp"
-        android:layout_height="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="32dp"
-        android:background="?android:attr/listDivider"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.101" >
 
 
-    </View>
 
-    <Button
-        android:id="@+id/btntosignup"
-        android:layout_width="399dp"
-        android:layout_height="41dp"
-        android:background="@drawable/btn_style2"
-        android:text="@string/new_user_please_click_here"
-        app:layout_constraintBottom_toBottomOf="@+id/bgview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider"
-        app:layout_constraintVertical_bias="0.076" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
