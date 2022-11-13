@@ -14,6 +14,8 @@ import com.passonatetech.letstalks.R;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class MessageView extends RecyclerView.Adapter<MessageView.MyViewHolder> {
 
     private final List<MessagesList> messagesList;
@@ -41,7 +43,7 @@ public class MessageView extends RecyclerView.Adapter<MessageView.MyViewHolder> 
     }
     //constructor created
     static class MyViewHolder extends RecyclerView.ViewHolder {
-        private ImageView profilePic;
+        private CircleImageView profilePic;
         private TextView name,lastMessage,UnseenMessage;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

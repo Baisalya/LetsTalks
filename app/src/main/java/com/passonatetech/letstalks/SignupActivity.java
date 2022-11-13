@@ -1,5 +1,6 @@
 package com.passonatetech.letstalks;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -25,6 +26,11 @@ public class SignupActivity extends AppCompatActivity {
     @Override
     public void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //
+        ProgressDialog progressDialog=new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Loading.....");
+        progressDialog.show();
         setContentView(R.layout.signup_activity);
 
        //  btn=findViewById(R.id.tosignup);
@@ -45,15 +51,18 @@ public class SignupActivity extends AppCompatActivity {
          signupbtn.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
+                 progressDialog.show();
                  final String nameTxt=name.getText().toString();
                  final String mobileTxt=mobile.getText().toString();
                  final String emailTxt=email.getText().toString();
                  if(nameTxt.isEmpty() || mobileTxt.isEmpty()|| emailTxt.isEmpty()){
                      Toast.makeText(SignupActivity.this, "All Filed Required to Filed", Toast.LENGTH_SHORT).show();
+                     progressDialog.dismiss();
                  }else {
                      databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                          @Override
                          public void onDataChange(@NonNull DataSnapshot snapshot) {
+                             progressDialog.dismiss();
                              if(snapshot.child("users").hasChild(mobileTxt)){
                                  Toast.makeText(SignupActivity.this, "already exists", Toast.LENGTH_SHORT).show();
                              }else{
@@ -67,11 +76,12 @@ public class SignupActivity extends AppCompatActivity {
                                  intent.putExtra("name",nameTxt);
                                  finish();
                              }
+
                          }
 
                          @Override
                          public void onCancelled(@NonNull DatabaseError error) {
-
+                              progressDialog.dismiss();
                          }
                      });
 

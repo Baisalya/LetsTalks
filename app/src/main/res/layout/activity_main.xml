@@ -32,15 +32,15 @@
 
             android:src="@drawable/transparency" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userdisplaypic"
             android:layout_width="40dp"
             android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginTop="40dp"
             android:padding="2dp"
-
-            android:src="@drawable/dot" />
+            android:src="@drawable/ic_baseline_person_outline_24" />
 
 
     </RelativeLayout>

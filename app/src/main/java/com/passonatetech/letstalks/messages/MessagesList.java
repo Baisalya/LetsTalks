@@ -1,13 +1,20 @@
 package com.passonatetech.letstalks.messages;
 
 public class MessagesList {
-    private String name,mobile,lastMessage;
+    private String name;
+    private String mobile;
+    private String lastMessage;
+    private String profilePic;
     private int unseenMessage;
-    public MessagesList(String name, String mobile, String lastMessage, int unseenMessage) {
+
+
+
+    public MessagesList(String name, String mobile, String lastMessage, int unseenMessage,String profilePic) {
         this.name = name;
         this.mobile = mobile;
         this.lastMessage = lastMessage;
         this.unseenMessage = unseenMessage;
+        this.profilePic=profilePic;
     }
 
     public String getName() {
@@ -42,6 +49,12 @@ public class MessagesList {
         this.unseenMessage = unseenMessage;
     }
 
+    public String getProfilePic() {
+        return profilePic;
+    }
 
+    public void setProfilePic(String profilePic) {
+        this.profilePic = profilePic;
+    }
 
 }
